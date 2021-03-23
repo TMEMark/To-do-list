@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr auto;
+  grid-gap: 25px;
+  grid-template-areas:
+    "nav_bar_up nav_bar_up nav_bar_up nav_bar_up"
+    "today body body body"
+    "planer body body body"
+    "projekt body body body"
+    "vazno body body body"
+    "kratke_inf body body body"
+    "... body body body";
+}
+.nav_bar_up { 
+    grid-area: nav_bar_up; 
+    background-color: rgb(118, 184, 184);
+    align-items: center;
+    min-height: 7vh;
+    justify-content: space-around;
+    padding-left: 10px;
+    grid-column: span 4;
+
+}
+.lajna {
+    border-left: 5px dotted aliceblue;
+    height: 10vh;
+    float: right;
+    transform: translate(-310px, 0px)
+}
+.logo{ 
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 20px;
+    transform: translate(0px, 7px)
+}
+.profile li {
+    list-style: none;
+    float: right;
+    justify-content: space-around;
+    width: 3.2%;
+}
+.profile a{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;  
+}
+i{
+    font-size: 30px;
+    color: aliceblue;
+}
+.profile i{
+    transform: translate(0px, -25px);
+}
+.profile i:hover {
+    color: rgba(245, 248, 80, 0.795);
+    opacity: 1;
+}
+.today {
+    grid-area: today;
+    background-color: rgb(118, 184, 184);
+    text-align: center;
+    color: aliceblue;
+}
+.today i {
+    transform: translate(0px, 30px);
+}
+.today p {
+    transform: translate(0px, 32px);
+}
+.planer {
+    grid-area: planer;
+    background-color: rgb(134,190,120);
+    text-align: center;
+    color: aliceblue;
+}
+.planer i{
+    transform: translate(0px, 30px);
+}
+.planer p {
+    transform: translate(0px, 32px);
+}
+.projekt {
+    grid-area: projekt;
+    background-color: rgb(211, 208, 125);
+    text-align: center;
+    color: aliceblue;
+}
+.projekt i{
+    transform: translate(0px, 30px);
+}
+.projekt p {
+    transform: translate(0px, 32px);
+}
+.vazno {
+    grid-area: vazno;
+    background-color: rgb(217,138,93);
+    text-align: center;
+    color: aliceblue;
+} 
+.vazno i {
+    transform: translate(0px, 30px);
+}
+.vazno p {
+    transform: translate(0px, 32px);
+}
+.kratke_inf {
+    grid-area: kratke_inf;
+    background-color: rgb(95, 95, 95);
+    text-align: center;
+    color: aliceblue;
+}
+.body {
+    grid-area: body; 
+    background-color: aliceblue;
+    margin-left: 200px;
+    margin-right: 300px;
+    color:rgb(34, 34, 34) ;
+}
+.body h2 {
+    font-size: 24px;
+}
+section {
+    padding-top: 15px;
+}
+
+.body h3 {
+    font-size: 20px;
+    display: inline-block;
+}
+
+#date {
+    display:inline-block;
+}
+
