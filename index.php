@@ -70,15 +70,18 @@
             <section>
                 <h3>Today</h3> 
                 <p id="date"></p>
-                <script>
-                    n =  new Date();
-                    y = n.getFullYear();
-                    m = n.getMonth() + 1;
-                    d = n.getDate();
-                    document.getElementById("date").innerHTML = d + "." + m + "." + y + ".";
-                </script>
+            </section>
+            <section>
+                <p>Add task</p>
             </section>
         </div>
     </div>
+    <script>
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = d + "." + m + "." + y + ".";
+    </script>
 </body>
 </html>
