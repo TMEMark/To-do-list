@@ -1,3 +1,6 @@
+<?php
+      include_once 'includes/dbh_inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en" />
 <head>
@@ -11,6 +14,9 @@
     <title>To-do-list</title>
 </head>
 <body>
+<?php
+    $sql = "SELECT * FROM users;";
+?>
     <div class="grid">
         <div class="nav_bar_up">
             <div class="lajna">
@@ -72,7 +78,9 @@
                 <p id="date"></p>
             </section>
             <section>
-                <p>Add task</p>
+                <form action="">
+                    <input type="text" name="task" placeholder="Add task">
+                </form>
             </section>
         </div>
     </div>
