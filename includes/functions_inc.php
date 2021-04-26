@@ -34,14 +34,14 @@ function passwordConf($password, $passwordConf) {
 function usernameExists($conn, $username) {
     $sql = "SELECT *
             FROM users
-            WHERE username = ?;";
+            WHERE usersUsername = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup/index.php?error=stmtfailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ss", $username);
+    mysqli_stmt_bind_param($stmt, "s", $username);
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
@@ -73,4 +73,5 @@ function  createUser($conn, $firstname, $lastname, $birthdate, $username, $passw
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signin/index.php?error=none");
+    exit();
 }

@@ -28,7 +28,7 @@
         </button>
         <p>Don't have an account ?</p>
         <p>Sing up now and get a hand on your life.</p>
-        <a href="../singup/index.php" class="button">Sign up</a>
+        <a href="../signup/index.php" class="button">Sign up</a>
     </div>
 </body>
 </html>

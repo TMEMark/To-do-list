@@ -23,7 +23,7 @@
             <input type="password" name="pwd" placeholder="Password...">
             <input type="password" name="pwdrepeat" placeholder="Confirm password...">
             <button type="submit" name="submit" class="button">
-            Sing up
+            Sign up
             </button>
         </form>
        
