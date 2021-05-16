@@ -14,7 +14,7 @@ if (isset($_POST["submit"])) {
     require_once 'dbh_inc.php';
     require_once 'functions_inc.php';
 
-    //Funkcije ako user sjebe nesto pri registraciji.
+    //Skripte za funkcije.
 
     if (emptyInputSignup($firstname, $lastname, $birthdate, $username, $password, $passwordConf) !== false) {
         header("location: ../signup/index.php?error=emptyinput");

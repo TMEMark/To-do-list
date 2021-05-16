@@ -1,13 +1,219 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.63fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "left-box left-box login-box login-box"
+        "left-box left-box login-box login-box"
+        "left-box left-box footer footer"
+    ;
+}
+
+.left-box {
+    grid-area: left-box;
+    height: 100vh;
+    padding: 15vh;
+    background-color: rgb(118, 184, 184);
+}
+
+.naslov {
+    color: aliceblue;
+    text-align: center;
+}
+
+.login-box {
+    grid-area: login-box;
+    height: 100vh;
+    padding: 15vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.username {
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+.username input {
+    width: 100%;
+    height: 100%;
+    color: rgb(7, 7, 7);
+    padding-top: 20px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    background-color: aliceblue;
+}
+
+.username label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.username label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -1px;
+    left: 0px;
+    border-bottom: 2px solid rgb(118, 184, 184);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+} 
+
+.content-username {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.username input:focus + .label-username .content-username,
+.username input:valid + .label-username .content-username 
+ {
+    transform: translateY(-150%);
+    font-size: 16px;
+    color: rgb(118, 184, 184);
+}
+
+.username input:focus + .label-username::after, 
+.username input:valid + .label-username::after {
+    transform: translateX(0%);
+}
+
+
+
+
+.password {
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+.password input {
+    width: 100%;
+    height: 100%;
+    color: rgb(7, 7, 7);
+    padding-top: 20px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    background-color: aliceblue;
+}
+
+.password label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.password label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -1px;
+    left: 0px;
+    border-bottom: 2px solid rgb(118, 184, 184);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+} 
+
+.content-pwd {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.password input:focus + .label-pwd .content-pwd,
+.password input:valid + .label-pwd .content-pwd 
+ {
+    transform: translateY(-150%);
+    font-size: 16px;
+    color: rgb(118, 184, 184);
+}
+
+.password input:focus + .label-pwd::after, 
+.password input:valid + .label-pwd::after {
+    transform: translateX(0%);
+}
+
+.signupinfo {
+    margin-top: 20px;
+}
+
 .button{
     
-    font: bold 12px Arial;
+    font-size: 20px;
+    font: bold;
     text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
-    padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
-      
+    background-color: rgb(118, 184, 184);
+    color: aliceblue;
+    padding: 25px 90px 25px 90px;
+    outline: none;
+    margin-top: 20px;
+    border: rgb(118, 184, 184);
+    opacity: 0.7;
+    
 }
+
+.button:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.puce {
+    margin-top: 50px;
+}
+
+a {
+    color: rgb(118, 184, 184);
+    font: bold;
+}
+
+.foooter {
+    grid-area: footer;
+}
+
+.name {
+    color: rgb(209, 58, 58);
+}
+
+@keyframes colorChange {
+    0%{fill:rgb(118, 184, 184)}
+    50%{fill:rgb(153, 76, 76)}
+    100%{fill: rgb(118, 184, 184)}
+}
+

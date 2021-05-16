@@ -25,8 +25,29 @@
             <button type="submit" name="submit" class="button">
             Sign up
             </button>
-        </form>
-       
+        </form>       
     </div>
+    <?php
+      if (isset($_GET["error"])){
+        if($_GET["error"] == "emptyinput"){
+            echo "<p>Fill in all fields.</p>";
+        }
+        else if ($_GET["error"] == "invalidusername") {
+            echo "<p>Chose a proper username(*, /, $, ^ are not allowed).</p>";
+        }
+        else if ($_GET["error"] == "passwordsdontmatch") {
+            echo "<p>Password has to match.</p>";
+        }
+        else if ($_GET["error"] == "usernamealreadyexists") {
+            echo "<p>Username already exists, please chose another username.</p>";
+        }
+        else if ($_GET["error"] == "stmtfailed") {
+            echo "<p>Ups something went wrong. Try again later</p>";
+        }
+        else if ($_GET["error"] == "none") {
+            echo "<p>You successfuly registered to To-do-list.</p>";
+        }
+      }
+    ?>
 </body>
 </html>
